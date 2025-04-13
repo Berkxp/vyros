@@ -263,7 +263,6 @@ def tools():
         menuescolha()
     elif escolhatool == 'exit':
         os.system('clear')
-        breK
         exit
     elif escolhatool == 'help':
         print('')
