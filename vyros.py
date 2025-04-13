@@ -4,8 +4,9 @@ import requests
 import random
 import webbrowser
 import time
+import platform
 os.system('clear')
-
+sistema = platform.system()
 def banner():
     print('____   ____                           ')
     print('\   \ /   /__.__._______  ____  ______')
@@ -129,56 +130,64 @@ def tools():
         print('[*] Installing Zphisher...')
         os.system('pkg install tur-repo')
         os.system('pkg install zphisher')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('Type "zphisher" to start Zphisher.')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
     elif escolhatool == '2':
         print('[*] Installing Txtool...')
         os.system('apt install git')
         os.system('apt install python2')
         os.system('git clone https://github.com/kuburan/txtool.git')
-        print('')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] After this type the follow commands:')
         print('cd ..')
         print('cd txtool')
         print('python install.py')
         print('txtool')
         print('[*] And is done!')
-        print('')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
     elif escolhatool == '3':
         print('[*] Installing Red Hawk...')
         os.system('apt install git')
         os.system('apt install php')
         os.system('git clone https://github.com/Tuhinshubhra/RED_HAWK')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] Tool instaled sucefully!')
         print('[*] Type the follow commands to start the tool:')
         print('>>> cd ..')
         print('>>> cd RED_HAWK')
         print('>>> php rhawk.php')
         print('[*]And is done!')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
     elif escolhatool == '4':
         print('[*] Installing Sql Map...')
         os.system('apt install python')
         os.system('pip install sqlmap')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] Type "sqlmap" to start the tool')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
     elif escolhatool == '5':
         print('[*] Installing Black Hydra...')
         os.system('apt install git')
         os.system('git clone https://github.com/Gameye98/Black-Hydra')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] Tool installed sucefully!')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
     elif escolhatool == '6':
         print('[*] Installing XOIC...')
         os.system('apt install python')
         os.system('pkg install git')
         os.system('git clone https://github.com/StormRLS/XOIC')
-        print('')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] After this type the follow commands:')
         print('cd ..')
         print('cd XOIC')
         print('python XOIC.py')
-        print('')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
     elif eecolhatool == '7':
         print('[*] Installing Xerxes...')
         os.system('pkg install git -y && git clone https://github.com/XCHADXFAQ77X/XERXES')
-        print('')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] After this is just type:')
         print('cd ..')
         print('cd XERXES')
@@ -186,16 +195,39 @@ def tools():
         print('./xerxes (ip) (port)')
         print('Example:')
         print('./xerxes 192.168.1.8 443')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+    elif escolhatool == '8':
+        os.system('apt install python2')
+        os.system('git clone https://github.com/bibortone/D-Tech.git')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print('[*] After this type:')
+        print('cd ..')
+        print('cd D-TECH')
+        print('python2 d-tect.py')
         print('')
-    elif escolhatool    
+        print('[*] And is done!')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+    elif escolhatool == '9':
+        os.system('apt install nmap')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print('[*] just type "nmap" to start the tool.')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+    elif escolhatool == '10':
+        os.system('git clone https://github.com/cyweb/hammer.git')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print('[*] Done!')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
     elif escolhatool == 'exit':
         os.system('clear')
         exit
     elif escolhatool == 'help':
-        print('list cmds')
-        print('help   print this help screen')
+        print('')
+        print('COMANDS LIST')
+        print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
+        print('help   print this help ')
         print('exit   exit tool')
-        print('banner   change banner')
+        print('banner  changes banner')
+        print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
     elif escolhatool == 'banner':
         os.system('clear')
         bannerandom()
@@ -206,16 +238,32 @@ def tools():
 def main_menu():
     print('')
     print('')
-    print('■■■■■■■■■■■■■■■■■■■■')
+    print('■■■■■■■■■■■■■■■■■■■■■■■■■')
     print('         MAIN MENU        ')
     print('1 > Bin check [OFF]')
     print('2 > Ip lookup')
     print('3 > Ddos [OFF]')
     print('4 > Install tools')
-    print('■■■■■■■■■■■■■■■■■■■■')
+    print('■■■■■■■■■■■■■■■■■■■■■■■■■')
 
 def ip_lookup():
     escolhaip = input('Type IP: ')
+    if escolhaip == 'banner':
+        bannerandom()
+        menuescolha()
+    elif escolhaip == 'exit':
+        os.system('clear')
+        break
+        exit
+    elif escolhaip == 'help':
+        print('')
+        print('COMANDS LIST')
+        print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
+        print('help   print this help ')
+        print('exit   exit tool')
+        print('banner  changes banner')
+        print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
+        print('')
     print('[*] Redirecting...')
     time.sleep(1)
     webbrowser.open(f'https://whatismyipaddress.com/ip/{escolhaip}')
@@ -255,7 +303,7 @@ def menuescolha():
             print('■■■■■■■■■■■■■■■■■■■■■■')
             print('1 > Zphisher    6 > XOIC')
             print('2 > Txtool.     7 > Xerxes')
-            print('3 > Red Hawk.   8 > D-TECT')
+            print('3 > Red Hawk.   8 > D-TECH')
             print('4 > Sql Map.    9 > Nmap')
             print('5 > Black-Hydra 10 > Hammer')
             print('■■■■■■■■■■■■■■■■■■■■■■')
