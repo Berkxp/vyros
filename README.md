@@ -1,5 +1,7 @@
 This is a Hacker tool that a beginner hacker made, that the functions that he have:
 
+Developed for Termux and Linux
+
 1 - Bin checker (OFF)
 
 2 - IP Lookup (ON)
