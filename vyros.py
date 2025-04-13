@@ -301,7 +301,6 @@ def ip_lookup():
     elif escolhaip == 'exit':
         os.system('clear')
         break
-        exit
     elif escolhaip == 'help':
         print('')
         print('COMANDS LIST')
