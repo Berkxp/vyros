@@ -98,8 +98,9 @@ def bannerandom():
         bannerand()
         
 def binchecker1():
-     bin = input('Type bin: ')
-     result = bin_check(bin)
+    bin = bin.strip('Type bin: ')
+    result = bin_check(bin)
+    imprime_informacoes_bin(result)
 
 def bin_check(bin):
     api_url = (f"https://api.binlist.net/v1/details/{bin}")
