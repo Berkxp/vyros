@@ -134,21 +134,23 @@ def tools():
         print('[*] Installing Txtool...')
         os.system('apt install git')
         os.system('apt install python2')
-        os.system('git clone https://github.com/kuburan/txtool.git /data/data/com.termux/files/home/')
+        os.system('git clone https://github.com/kuburan/txtool.git')
+        print('')
         print('[*] After this type the follow commands:')
-        print('cd')
+        print('cd ..')
         print('cd txtool')
         print('python install.py')
         print('txtool')
         print('[*] And is done!')
+        print('')
     elif escolhatool == '3':
         print('[*] Installing Red Hawk...')
         os.system('apt install git')
         os.system('apt install php')
-        os.system('git clone https://github.com/Tuhinshubhra/RED_HAWK /data/data/com.termux/files/home/')
+        os.system('git clone https://github.com/Tuhinshubhra/RED_HAWK')
         print('[*] Tool instaled sucefully!')
         print('[*] Type the follow commands to start the tool:')
-        print('>>> cd')
+        print('>>> cd ..')
         print('>>> cd RED_HAWK')
         print('>>> php rhawk.php')
         print('[*]And is done!')
@@ -160,8 +162,32 @@ def tools():
     elif escolhatool == '5':
         print('[*] Installing Black Hydra...')
         os.system('apt install git')
-        os.system('git clone https://github.com/Gameye98/Black-Hydra /data/data/com.termux/files/home/')
+        os.system('git clone https://github.com/Gameye98/Black-Hydra')
         print('[*] Tool installed sucefully!')
+    elif escolhatool == '6':
+        print('[*] Installing XOIC...')
+        os.system('apt install python')
+        os.system('pkg install git')
+        os.system('git clone https://github.com/StormRLS/XOIC')
+        print('')
+        print('[*] After this type the follow commands:')
+        print('cd ..')
+        print('cd XOIC')
+        print('python XOIC.py')
+        print('')
+    elif eecolhatool == '7':
+        print('[*] Installing Xerxes...')
+        os.system('pkg install git -y && git clone https://github.com/XCHADXFAQ77X/XERXES')
+        print('')
+        print('[*] After this is just type:')
+        print('cd ..')
+        print('cd XERXES')
+        print('gcc -o xerxes xerxes.c')
+        print('./xerxes (ip) (port)')
+        print('Example:')
+        print('./xerxes 192.168.1.8 443')
+        print('')
+    elif escolhatool    
     elif escolhatool == 'exit':
         os.system('clear')
         exit
@@ -171,6 +197,7 @@ def tools():
         print('exit   exit tool')
         print('banner   change banner')
     elif escolhatool == 'banner':
+        os.system('clear')
         bannerandom()
         tools()
     else:
@@ -179,30 +206,31 @@ def tools():
 def main_menu():
     print('')
     print('')
-    print('########################')
-    print('       MAIN MENU        ')
-    print('1 > Bin check')
+    print('■■■■■■■■■■■■■■■■■■■■')
+    print('         MAIN MENU        ')
+    print('1 > Bin check [OFF]')
     print('2 > Ip lookup')
-    print('3 > Ddos')
+    print('3 > Ddos [OFF]')
     print('4 > Install tools')
-    print('########################')
+    print('■■■■■■■■■■■■■■■■■■■■')
 
 def ip_lookup():
     escolhaip = input('Type IP: ')
     print('[*] Redirecting...')
-    time.sleep(3)
+    time.sleep(1)
     webbrowser.open(f'https://whatismyipaddress.com/ip/{escolhaip}')
-    time.sleep(2)
+    time.sleep(1)
     backmenu = input('Do you want back to menu? (yes/no) ')
     if backmenu == 'yes':
         menuescolha()
     elif backmenu == 'no':
-        pyautogui.hotkey('crtl', 'c')
-        pytautogui.press('enter')
+        os.system('clear')
+        break
     else:
         print('Invalid Option!')    
 def menuescolha():
     while True:
+        bannerandom()
         main_menu()
         escolha = input('>>> Selecione uma opção: ')
         if escolha == '1':
@@ -213,8 +241,8 @@ def menuescolha():
                 menuescolha()
             elif backmenu == 'no':
                 time.sleep(2)
-                pyautogui.hotkey('crtl', 'c')
-                pytautogui.press('enter')
+                print('[*] Exiting Vyros...')
+                break
             else:
                 print('Invalid Option!')
         elif escolha == '2':
@@ -223,31 +251,35 @@ def menuescolha():
             # implementar ddos
             pass
         elif escolha == '4':
-            print('             INSTALL TOOLS')
-            print('1 > Zphisher')
-            print('2 > Txtool')
-            print('3 > Red Hawk')
-            print('4 > Sql Map')
-            print('5 > Black-Hydra')
+            print('      INSTALL TOOLS')
+            print('■■■■■■■■■■■■■■■■■■■■■■')
+            print('1 > Zphisher    6 > XOIC')
+            print('2 > Txtool.     7 > Xerxes')
+            print('3 > Red Hawk.   8 > D-TECT')
+            print('4 > Sql Map.    9 > Nmap')
+            print('5 > Black-Hydra 10 > Hammer')
+            print('■■■■■■■■■■■■■■■■■■■■■■')
             tools()
         elif escolha == 'help':
             print('')
             print('')
-            print('list cmds')
-            print('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
-            print('help   print this help screen')
+            print('COMANDS LIST')
+            print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
+            print('help   print this help ')
             print('exit   exit tool')
-            print('banner   change banner')
-            print('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
+            print('banner  changes banner')
+            print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
             print('')
         elif escolha == 'banner':
+            os.system('clear')
             bannerandom()
+            menuescolha()
         elif escolha == 'exit':
             print('[*] Exiting Vyros...')
             break
         elif escolha == 'clear':
             os.system('clear')
-            print(bannerandom)
+            bannerandom()
             menuescolha()
 
 menuescolha()
