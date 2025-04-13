@@ -4,9 +4,12 @@ import requests
 import random
 import webbrowser
 import time
-import platform
+import platform 
+
 os.system('clear')
+
 sistema = platform.system()
+
 def banner():
     print('____   ____                           ')
     print('\   \ /   /__.__._______  ____  ______')
@@ -133,6 +136,10 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('Type "zphisher" to start Zphisher.')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(2)
+        os.system('clear')
+        bannerandom()
+        menuescolha()
     elif escolhatool == '2':
         print('[*] Installing Txtool...')
         os.system('apt install git')
@@ -146,6 +153,10 @@ def tools():
         print('txtool')
         print('[*] And is done!')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(3)
+        os.system('clear')
+        bannerandom()
+        menuescolha()
     elif escolhatool == '3':
         print('[*] Installing Red Hawk...')
         os.system('apt install git')
@@ -159,6 +170,10 @@ def tools():
         print('>>> php rhawk.php')
         print('[*]And is done!')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(4)
+        os.system('clear')
+        bannerandom()
+        menuescolha()
     elif escolhatool == '4':
         print('[*] Installing Sql Map...')
         os.system('apt install python')
@@ -166,6 +181,10 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] Type "sqlmap" to start the tool')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(2)
+        os.system('clear')
+        bannerandom()
+        menuescolha()
     elif escolhatool == '5':
         print('[*] Installing Black Hydra...')
         os.system('apt install git')
@@ -173,6 +192,10 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] Tool installed sucefully!')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(2)
+        os.system('clear')
+        bannerandom()
+        menuescolha()
     elif escolhatool == '6':
         print('[*] Installing XOIC...')
         os.system('apt install python')
@@ -184,6 +207,10 @@ def tools():
         print('cd XOIC')
         print('python XOIC.py')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(4)
+        os.system('clear')
+        banneranodom()
+        menuescolha()
     elif eecolhatool == '7':
         print('[*] Installing Xerxes...')
         os.system('pkg install git -y && git clone https://github.com/XCHADXFAQ77X/XERXES')
@@ -196,6 +223,10 @@ def tools():
         print('Example:')
         print('./xerxes 192.168.1.8 443')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(8)
+        os.system('clear')
+        bannerandom()
+        menuescolha()
     elif escolhatool == '8':
         os.system('apt install python2')
         os.system('git clone https://github.com/bibortone/D-Tech.git')
@@ -207,18 +238,31 @@ def tools():
         print('')
         print('[*] And is done!')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(5)
+        os.system('clear')
+        bannerandom()
+        menuescolha()
     elif escolhatool == '9':
         os.system('apt install nmap')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] just type "nmap" to start the tool.')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(3)
+        os.system('clear')
+        bannerandom()
+        menuescolha()
     elif escolhatool == '10':
         os.system('git clone https://github.com/cyweb/hammer.git')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] Done!')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        time.sleep(3)
+        os.system('clear')
+        bannerandom()
+        menuescolha()
     elif escolhatool == 'exit':
         os.system('clear')
+        breK
         exit
     elif escolhatool == 'help':
         print('')
@@ -233,7 +277,9 @@ def tools():
         bannerandom()
         tools()
     else:
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('Opção inválida')
+        print('■■■■■■■■■■■■■■■■■■■■■■■■■■')
         
 def main_menu():
     print('')
