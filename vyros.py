@@ -294,6 +294,7 @@ def main_menu():
     print('■■■■■■■■■■■■■■■■■■■■■■■■■')
 
 def ip_lookup():
+    while True:
     escolhaip = input('Type IP: ')
     if escolhaip == 'banner':
         bannerandom()
