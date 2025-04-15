@@ -2,14 +2,10 @@
 import os
 import requests
 import random
-import webbrowser
 import time
-import platform
 import sys
 
 os.system('clear')
-
-sistema = platform.system()
 
 def banner():
     print('____   ____                           ')
@@ -102,10 +98,11 @@ def bincheckbanner():
     print('')
      
 print ('>>> Starting Vyros tool...')
-banner5()
+bannerandom()
 
 def bannerandom():
         bannerand = random.choice([banner, banner2, banner3, banner4, banner5, banner6, banner7])
+        bannerand()
 
 def bin_checker(bin_number):
     url = f"https://lookup.binlist.net/{bin_number}"
@@ -256,21 +253,14 @@ def tools():
         os.system('clear')
         menuescolha()
     elif escolhatool == '9':
-        os.system('apt install nmap')
+        os.system('pkg install nmap')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] just type "nmap" to start the tool.')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(3)
         os.system('clear')
         bannerandom()
-    elif escolhatool == '10':
-        os.system('git clone https://github.com/cyweb/hammer.git')
-        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
-        print('[*] Done!')
-        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
-        time.sleep(3)
-        os.system('clear')
-        menuescolha()
+    elif escolhatool == '10': hammer()
     elif escolhatool == 'exit':
         os.system('clear')
         exit()
@@ -301,36 +291,27 @@ def main_menu():
     print('3 > Ddos [OFF]')
     print('4 > Install tools')
     print('■■■■■■■■■■■■■■■■■■■■■■■■■')
+     
+def ip_lookup(ip_address):
+    try:
+        # Fazendo a requisição para a API
+        response = requests.get(f'https://ipinfo.io/{ip_address}/json')
+        response.raise_for_status()  # Levanta um erro se a requisição falhar
 
-def ip_lookup():
-    escolhaip = input('Type IP: ')
-    if escolhaip == 'banner':
-        bannerandom()
-        menuescolha()
-    elif escolhaip == 'exit':
-        os.system('clear')
-        exit()
-    elif escolhaip == 'help':
-        print('')
-        print('COMANDS LIST')
-        print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
-        print('help   print this help ')
-        print('exit   exit tool')
-        print('banner  changes banner')
-        print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
-        print('')
-    print('[*] Redirecting...')
-    time.sleep(1)
-    webbrowser.open(f'https://whatismyipaddress.com/ip/{escolhaip}')
-    time.sleep(1)
-    backmenu = input('Do you want back to menu? (yes/no) ')
-    if backmenu == 'yes':
-        menuescolha()
-    elif backmenu == 'no':
-        os.system('clear')
-        exit()
-    else:
-        print('Invalid Option!')    
+        # Convertendo a resposta em JSON
+        data = response.json()
+
+        # Exibindo as informações
+        print(f"Ip info: {ip_address}")
+        print(f"Hostname: {data.get('hostname', 'N/A')}")
+        print(f"City: {data.get('city', 'N/A')}")
+        print(f"Region: {data.get('region', 'N/A')}")
+        print(f"Country: {data.get('country', 'N/A')}")
+        print(f"Location: {data.get('loc', 'N/A')}")
+        print(f"Organization: {data.get('org', 'N/A')}")
+    except requests.exceptions.RequestException as e:
+        print(f"Error while checking ip: {e}")
+     
 def menuescolha():
     while True:
         bannerandom()
@@ -342,15 +323,16 @@ def menuescolha():
             backmenu1 = input('Do you want back to menu? (yes/no) ')
             if backmenu1 == 'yes':
                 menuescolha()
-            elif backmenu1 == 'no':
+            elif backmenu == 'no':
                 time.sleep(2)
                 print('[*] Exiting Vyros...')
                 break
-                exit()
             else:
                 print('Invalid Option!')
         elif escolha == '2':
-            ip_lookup()
+            ip_address = input('Type Ip, Example below ⤵: ')
+            print('    Example (192.168.1.8)')
+            ip_lookup(ip_address)
         elif escolha == '3':
             # implementar ddos
             pass
@@ -385,5 +367,8 @@ def menuescolha():
             os.system('clear')
             bannerandom()
             menuescolha()
+
+def hammer():
+    os.system('git clone https://github.com/cyweb/hammer.git')
 
 menuescolha()
