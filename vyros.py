@@ -98,7 +98,7 @@ def bincheckbanner():
     print('')
      
 print ('>>> Starting Vyros tool...')
-bannerandom()
+banner5()
 
 def bannerandom():
         bannerand = random.choice([banner, banner2, banner3, banner4, banner5, banner6, banner7])
