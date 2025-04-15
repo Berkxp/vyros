@@ -96,7 +96,6 @@ banner5()
 
 def bannerandom():
         bannerand = random.choice([banner, banner2, banner3, banner4, banner5, banner6, banner7])
-        bannerand()
 
 def bin_checker(bin_number):
     url = f"https://lookup.binlist.net/{bin_number}"
@@ -120,30 +119,22 @@ def bininfo():
 
     if result:
         print('')
-        print('    BERKXP')
-        print('    VYROS 1.0')
-        print('    BIN CHECKER:')
+        print('    🎩 BERKXP')
+        print('    💻 VYROS 1.0')
+        print('    🏤 BIN CHECKER:')
         print('')
         print("Bin info:")
-        print(f"Banco: {result['bank']}")
-        print(f"Marca: {result['brand']}")
-        print(f"Tipo: {result['type']}")
-        print(f"País: {result['country']}")
-        print(f"Nível: {result['level']}")
+        print(f"🏤 Banco: {result['bank']}")
+        print(f"💍 Marca: {result['brand']}")
+        print(f"✏️ Tipo: {result['type']}")
+        print(f"🇧🇷 País: {result['country']}")
+        print(f"💈 Nível: {result['level']}")
     else:
         print("Error.")
+        time.sleep(2)
+        os.system("clear")
+        menuescolha()
         
-def imprime_informacoes_bin(result):
-    if result:
-        print(f"Bin: {result['bin']}")
-        print(f"Tipo: {result['type']}")
-        print(f"Marca: {result['brand']}")
-        print(f"País: {result['country']}")
-        print(f"Banco: {result['bank']}")
-        print('Bin Checked!')
-    else:
-        print('Erro ao verificar bin')
- 
 def tools():
     escolhatool = input('>>> Select a option: ')
     if escolhatool == '1':
