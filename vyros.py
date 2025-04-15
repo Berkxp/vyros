@@ -222,7 +222,7 @@ def tools():
         time.sleep(4)
         os.system('clear')
         menuescolha()
-    elif eecolhatool == '7':
+    elif escolhatool == '7':
         print('[*] Installing Xerxes...')
         os.system('pkg install git -y && git clone https://github.com/XCHADXFAQ77X/XERXES')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
