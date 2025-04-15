@@ -90,6 +90,16 @@ def banner7():
     print('                   /#######  /#                               ')
     print('                  /      ###/                                 ')
     print ('[*] This tool dont promove web attacks and illegals attitudes')
+    
+def bincheckbanner():
+    print('██████╗ ██╗███╗   ██╗     ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗')
+    print('██╔══██╗██║████╗  ██║    ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝')
+    print('██████╔╝██║██╔██╗ ██║    ██║     ███████║█████╗  ██║     █████╔╝ ')
+    print('██╔══██╗██║██║╚██╗██║    ██║     ██╔══██║██╔══╝  ██║     ██╔═██╗ ')
+    print('██████╔╝██║██║ ╚████║    ╚██████╗██║  ██║███████╗╚██████╗██║  ██╗')
+    print('╚═════╝ ╚═╝╚═╝  ╚═══╝     ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝')
+    print('')
+    print('')
      
 print ('>>> Starting Vyros tool...')
 banner5()
@@ -115,6 +125,7 @@ def bin_checker(bin_number):
         
 def bininfo():
     os.system("clear")
+    bincheckbanner()
     bin_number = input("Type Bin (6 digits): ")
     result = bin_checker(bin_number)
 
@@ -126,11 +137,11 @@ def bininfo():
         print('')
         print("Bin info:")
         print('')
-        print(f"🏤 Banco: {result['bank']}")
-        print(f"💍 Marca: {result['brand']}")
-        print(f"✏️ Tipo: {result['type']}")
-        print(f"🇧🇷 País: {result['country']}")
-        print(f"💈 Nível: {result['level']}")
+        print(f"🏤 Bank: {result['bank']}")
+        print(f"®️ Brand: {result['brand']}")
+        print(f"🏷 Type: {result['type']}")
+        print(f"🌐 Country: {result['country']}")
+        print(f"⬆️ Level: {result['level']}")
     else:
         print("Error.")
         time.sleep(2)
@@ -148,7 +159,6 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(2)
         os.system('clear')
-        bannerandom()
         menuescolha()
     elif escolhatool == '2':
         print('[*] Installing Txtool...')
@@ -165,7 +175,6 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(3)
         os.system('clear')
-        bannerandom()
         menuescolha()
     elif escolhatool == '3':
         print('[*] Installing Red Hawk...')
@@ -182,7 +191,6 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(4)
         os.system('clear')
-        bannerandom()
         menuescolha()
     elif escolhatool == '4':
         print('[*] Installing Sql Map...')
@@ -193,7 +201,6 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(2)
         os.system('clear')
-        bannerandom()
         menuescolha()
     elif escolhatool == '5':
         print('[*] Installing Black Hydra...')
@@ -204,7 +211,6 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(2)
         os.system('clear')
-        bannerandom()
         menuescolha()
     elif escolhatool == '6':
         print('[*] Installing XOIC...')
@@ -219,7 +225,6 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(4)
         os.system('clear')
-        banneranodom()
         menuescolha()
     elif eecolhatool == '7':
         print('[*] Installing Xerxes...')
@@ -235,7 +240,6 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(8)
         os.system('clear')
-        bannerandom()
         menuescolha()
     elif escolhatool == '8':
         os.system('apt install python2')
@@ -250,7 +254,6 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(5)
         os.system('clear')
-        bannerandom()
         menuescolha()
     elif escolhatool == '9':
         os.system('apt install nmap')
@@ -260,7 +263,6 @@ def tools():
         time.sleep(3)
         os.system('clear')
         bannerandom()
-        menuescolha()
     elif escolhatool == '10':
         os.system('git clone https://github.com/cyweb/hammer.git')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
@@ -268,7 +270,6 @@ def tools():
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(3)
         os.system('clear')
-        bannerandom()
         menuescolha()
     elif escolhatool == 'exit':
         os.system('clear')
