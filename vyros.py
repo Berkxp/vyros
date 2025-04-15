@@ -4,7 +4,8 @@ import requests
 import random
 import webbrowser
 import time
-import platform 
+import platform
+import sys
 
 os.system('clear')
 
@@ -263,7 +264,7 @@ def tools():
         menuescolha()
     elif escolhatool == 'exit':
         os.system('clear')
-        exit
+        exit()
     elif escolhatool == 'help':
         print('')
         print('COMANDS LIST')
@@ -293,14 +294,13 @@ def main_menu():
     print('■■■■■■■■■■■■■■■■■■■■■■■■■')
 
 def ip_lookup():
-    while True:
     escolhaip = input('Type IP: ')
     if escolhaip == 'banner':
         bannerandom()
         menuescolha()
     elif escolhaip == 'exit':
         os.system('clear')
-        break
+        exit()
     elif escolhaip == 'help':
         print('')
         print('COMANDS LIST')
@@ -370,7 +370,7 @@ def menuescolha():
             menuescolha()
         elif escolha == 'exit':
             print('[*] Exiting Vyros...')
-            break
+            exit()
         elif escolha == 'clear':
             os.system('clear')
             bannerandom()
