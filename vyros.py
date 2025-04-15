@@ -98,7 +98,6 @@ def bincheckbanner():
     print('')
      
 print ('>>> Starting Vyros tool...')
-banner5()
 
 def bannerandom():
         bannerand = random.choice([banner, banner2, banner3, banner4, banner5, banner6, banner7])
@@ -302,13 +301,27 @@ def ip_lookup(ip_address):
         data = response.json()
 
         # Exibindo as informações
+        print('')
         print(f"Ip info: {ip_address}")
-        print(f"Hostname: {data.get('hostname', 'N/A')}")
-        print(f"City: {data.get('city', 'N/A')}")
-        print(f"Region: {data.get('region', 'N/A')}")
-        print(f"Country: {data.get('country', 'N/A')}")
-        print(f"Location: {data.get('loc', 'N/A')}")
-        print(f"Organization: {data.get('org', 'N/A')}")
+        print('𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃')
+        print(f"💻 Hostname: {data.get('hostname', 'N/A')}")
+        print(f"🏙 City: {data.get('city', 'N/A')}")
+        print(f"🌏 Region: {data.get('region', 'N/A')}")
+        print(f"🌍 Country: {data.get('country', 'N/A')}")
+        print(f"📍 Location: {data.get('loc', 'N/A')}")
+        print(f"🏢 Organization: {data.get('org', 'N/A')}")
+        print('𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃')
+        print('')
+        backmenu3 = input('Back to menu? (yes/no)').lower()
+        if backmenu3 == 'yes':
+            time.sleep(1)
+            os.system('clear')
+            menuescolha()
+        if backmenu3 == 'no':
+            time.sleep(1)
+            os.system('clear')
+            print('>>> Exiting Vyros...')
+            exit()
     except requests.exceptions.RequestException as e:
         print(f"Error while checking ip: {e}")
      
@@ -330,8 +343,7 @@ def menuescolha():
             else:
                 print('Invalid Option!')
         elif escolha == '2':
-            ip_address = input('Type Ip, Example below ⤵: ')
-            print('    Example (192.168.1.8)')
+            ip_address = input('Type Ip: ')
             ip_lookup(ip_address)
         elif escolha == '3':
             # implementar ddos
@@ -358,14 +370,12 @@ def menuescolha():
             print('')
         elif escolha == 'banner':
             os.system('clear')
-            bannerandom()
             menuescolha()
         elif escolha == 'exit':
             print('[*] Exiting Vyros...')
             exit()
         elif escolha == 'clear':
             os.system('clear')
-            bannerandom()
             menuescolha()
 
 def hammer():
