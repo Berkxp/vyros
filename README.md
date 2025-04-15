@@ -1,5 +1,8 @@
 This is a Hacker tool that a beginner hacker made, that the functions that he have:
 
+![Banner]
+(https://raw.githubusercontent.com/Berkxp/vyros/refs/heads/main/imgs/Picsart_25-04-15_18-05-59-614.jpg)
+
 Developed for Termux and Linux
 
 1 - Bin checker (ON)
