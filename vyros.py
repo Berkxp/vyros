@@ -264,7 +264,7 @@ def tools():
         menuescolha()
     elif escolhatool == 'exit':
         os.system('clear')
-        exit()
+        exit()k
     elif escolhatool == 'help':
         print('')
         print('COMANDS LIST')
@@ -319,7 +319,7 @@ def ip_lookup():
         menuescolha()
     elif backmenu == 'no':
         os.system('clear')
-        break
+        exit()
     else:
         print('Invalid Option!')    
 def menuescolha():
