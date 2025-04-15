@@ -114,6 +114,7 @@ def bin_checker(bin_number):
         return None
         
 def bininfo():
+    os.system("clear")
     bin_number = input("Type Bin (6 digits): ")
     result = bin_checker(bin_number)
 
@@ -124,6 +125,7 @@ def bininfo():
         print('    🏤 BIN CHECKER:')
         print('')
         print("Bin info:")
+        print('')
         print(f"🏤 Banco: {result['bank']}")
         print(f"💍 Marca: {result['brand']}")
         print(f"✏️ Tipo: {result['type']}")
@@ -293,7 +295,7 @@ def main_menu():
     print('')
     print('■■■■■■■■■■■■■■■■■■■■■■■■■')
     print('         MAIN MENU        ')
-    print('1 > Bin check [OFF]')
+    print('1 > Bin check')
     print('2 > Ip lookup')
     print('3 > Ddos [OFF]')
     print('4 > Install tools')
