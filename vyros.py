@@ -342,10 +342,11 @@ def menuescolha():
             backmenu1 = input('Do you want back to menu? (yes/no) ')
             if backmenu1 == 'yes':
                 menuescolha()
-            elif backmenu == 'no':
+            elif backmenu1 == 'no':
                 time.sleep(2)
                 print('[*] Exiting Vyros...')
                 break
+                exit()
             else:
                 print('Invalid Option!')
         elif escolha == '2':
