@@ -12,6 +12,7 @@ Developed for Termux and Linux
 
 Installation steps:
 
+```
 git clone https://github.com/Berkxp/vyros.git
 
 cd vyros
@@ -21,3 +22,4 @@ chmod +x install.sh
 ./install.sh
 
 python3 vyros.py
+```
