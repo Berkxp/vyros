@@ -97,26 +97,41 @@ banner5()
 def bannerandom():
         bannerand = random.choice([banner, banner2, banner3, banner4, banner5, banner6, banner7])
         bannerand()
-        
-def binchecker1():
-    bin = bin.strip('Type bin: ')
-    result = bin_check(bin)
-    imprime_informacoes_bin(result)
 
-def bin_check(bin):
-    api_url = (f"https://api.binlist.net/v1/details/{bin}")
-    response = requests.get(api_url)
-    if response.status_code == '200':
+def bin_checker(bin_number):
+    url = f"https://lookup.binlist.net/{bin_number}"
+    response = requests.get(url)
+
+    if response.status_code == 200:
         data = response.json()
         return {
-            "bin": bin,
-            "type": data["type"],
-            "brand": data["brand"],
-            "country": data["country"]["name"],
-            "bank": data["bank"]["name"]
+            "bank": data.get("bank", {}).get("name"),
+            "brand": data.get("brand"),
+            "type": data.get("type"),
+            "country": data.get("country", {}).get("name"),
+            "level": data.get("level"),
         }
     else:
         return None
+        
+def bininfo():
+    bin_number = input("Type Bin (6 digits): ")
+    result = bin_checker(bin_number)
+
+    if result:
+        print('')
+        print('    BERKXP')
+        print('    VYROS 1.0')
+        print('    BIN CHECKER:')
+        print('')
+        print("Bin info:")
+        print(f"Banco: {result['bank']}")
+        print(f"Marca: {result['brand']}")
+        print(f"Tipo: {result['type']}")
+        print(f"País: {result['country']}")
+        print(f"Nível: {result['level']}")
+    else:
+        print("Error.")
         
 def imprime_informacoes_bin(result):
     if result:
@@ -264,7 +279,7 @@ def tools():
         menuescolha()
     elif escolhatool == 'exit':
         os.system('clear')
-        exit()k
+        exit()
     elif escolhatool == 'help':
         print('')
         print('COMANDS LIST')
@@ -328,7 +343,7 @@ def menuescolha():
         main_menu()
         escolha = input('>>> Selecione uma opção: ')
         if escolha == '1':
-            binchecker1()
+            bininfo()
             time.sleep(2)
             backmenu1 = input('Do you want back to menu? (yes/no) ')
             if backmenu1 == 'yes':
