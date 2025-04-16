@@ -21,11 +21,11 @@ def banner():
     print(Fore.MAGENTA + '[*] This tool does not promote web attacks and illegals attitudes')
 
 def banner2():
-    print(Fore.RED + '        ▌ ▐· ▄· ▄▌▄▄▄        .▄▄ · ')
-    print(Fore.RED + '   ▪️█·█▌▐█▪️██▌▀▄ █·▪️     ▐█ ▀. ')
-    print(Fore.RED + '    ▐█▐█•▐█▌▐█▪️▐▀▀▄  ▄█▀▄ ▄▀▀▀█▄')
-    print(Fore.RED + '     ███  ▐█▀·.▐█•█▌▐█▌.▐▌▐█▄▪️▐█')
-    print(Fore.RED + '     . ▀    ▀ • .▀  ▀ ▀█▄▀▪️ ▀▀▀▀ ')
+    print(Fore.RED + """     ▌ ▐· ▄· ▄▌▄▄▄        .▄▄ · 
+    ▪█·█▌▐█▪██▌▀▄ █·▪     ▐█ ▀. 
+    ▐█▐█•▐█▌▐█▪▐▀▀▄  ▄█▀▄ ▄▀▀▀█▄
+     ███  ▐█▀·.▐█•█▌▐█▌.▐▌▐█▄▪▐█
+    . ▀    ▀ • .▀  ▀ ▀█▄▀▪ ▀▀▀▀ """)
     print (Fore.MAGENTA + '[*] This tool does not promote web attacks and illegals attitudes')
 
 def banner3():
@@ -92,7 +92,7 @@ def banner7():
     print (Fore.MAGENTA + '[*] This tool does not promote web attacks and illegals attitudes')
     
 def bincheckbanner():
-    print('        ██████╗ ██╗███╗   ██╗     ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗')
+    print(Style.RESET_ALL + '        ██████╗ ██╗███╗   ██╗     ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗')
     print('        ██╔══██╗██║████╗  ██║    ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝')
     print('        ██████╔╝██║██╔██╗ ██║    ██║     ███████║█████╗  ██║     █████╔╝ ')
     print('        ██╔══██╗██║██║╚██╗██║    ██║     ██╔══██║██╔══╝  ██║     ██╔═██╗ ')
@@ -131,16 +131,16 @@ def bininfo():
 
     if result:
         print('')
-        print('    🎩 BERKXP')
-        print('    💻 VYROS 1.0')
-        print('    🏤 BIN CHECKER:')
+        print(Fore.RED + '    🎩 BERKXP')
+        print(Fore.RED + '    💻 VYROS 1.0')
+        print(Fore.RED + '    🏤 BIN CHECKER:')
         print('')
-        print("Bin info:")
+        print(Fore.RED + "Bin info:")
         print('')
-        print(f"🏤 Bank: {result['bank']}")
-        print(f"✅️ Level: {result['brand']}")
-        print(f"🏷 Type: {result['type']}")
-        print(f"🌐 Country: {result['country']}")
+        print(Fore.RED + f"🏤 Bank: {result['bank']}")
+        print(Fore.RED + f"✅️ Level: {result['brand']}")
+        print(Fore.RED + f"🏷 Type: {result['type']}")
+        print(Fore.RED + f"🌐 Country: {result['country']}")
     else:
         print("Error.")
         time.sleep(2)
@@ -148,12 +148,12 @@ def bininfo():
         menuescolha()
         
 def tools():
-    escolhatool = input('>>> Select a option: ')
+    escolhatool = input(Fore.MAGENTA + '>>> Select a option: ')
     if escolhatool == '1':
-        print('[*] Installing Zphisher...')
+        print(Fore.CYAN'[*] Installing Zphisher...')
         os.system('pkg install tur-repo')
         os.system('pkg install zphisher')
-        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RED + '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('Type "zphisher" to start Zphisher.')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         time.sleep(2)
@@ -332,7 +332,7 @@ def menuescolha():
     while True:
         bannerandom()
         main_menu()
-        escolha = input('>>> Selecione uma opção: ')
+        escolha = input('>>> Option: ')
         if escolha == '1':
             bininfo()
             time.sleep(2)
