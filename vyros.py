@@ -4,6 +4,7 @@ import requests
 import random
 import time
 import sys
+import colorama
 
 os.system('clear')
 
