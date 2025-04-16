@@ -1,4 +1,4 @@
-# This tool doens't promove any illegal attitude or pentest with no authorization, this tool its for educacional purposes only
+# This tool don't promote any illegal attitude or pentest with no authorization, this tool its for educacional purposes only
 import os
 import requests
 import random
@@ -8,13 +8,13 @@ import sys
 os.system('clear')
 
 def banner():
-    print('____   ____                           ')
-    print('\   \ /   /__.__._______  ____  ______')
-    print(' \   Y   <   |  |\_  __ \/  _ \/  ___/')
-    print('  \     / \___  | |  | \(  <_> )___ \ ')
-    print('   \___/  / ____| |__|   \____/____  >')
-    print('          \/                       \/ ')
-    print('[*] This tool dont promove web attacks and illegals attitudes')
+    print('    ____   ____                           ')
+    print('    \   \ /   /__.__._______  ____  ______')
+    print('     \   Y   <   |  |\_  __ \/  _ \/  ___/')
+    print('      \     / \___  | |  | \(  <_> )___ \ ')
+    print('       \___/  / ____| |__|   \____/____  >')
+    print('              \/                       \/ ')
+    print('[*] This tool does not promote web attacks and illegals attitudes')
 
 def banner2():
     print (' ▌ ▐· ▄· ▄▌▄▄▄        .▄▄ · ')
@@ -22,7 +22,7 @@ def banner2():
     print('▐█▐█•▐█▌▐█▪️▐▀▀▄  ▄█▀▄ ▄▀▀▀█▄')
     print(' ███  ▐█▀·.▐█•█▌▐█▌.▐▌▐█▄▪️▐█')
     print('. ▀    ▀ • .▀  ▀ ▀█▄▀▪️ ▀▀▀▀ ')
-    print ('[*] This tool dont promove web attacks and illegals attitudes')
+    print ('[*] This tool does not promote web attacks and illegals attitudes')
 
 def banner3():
     print(' ██▒   █▓▓██   ██▓ ██▀███   ▒█████    ██████ ')
@@ -35,7 +35,7 @@ def banner3():
     print('     ░░   ▒ ▒ ░░    ░░   ░ ░ ░ ░ ▒  ░  ░  ░  ')
     print('      ░   ░ ░        ░         ░ ░        ░  ')
     print('     ░    ░ ░                                ')
-    print ('[*] This tool dont promove web attacks and illegals attitudes')
+    print ('[*] This tool does not promote web attacks and illegals attitudes')
 
 def banner4():
     print('██╗   ██╗██╗   ██╗██████╗  ██████╗ ███████╗')
@@ -44,7 +44,7 @@ def banner4():
     print('╚██╗ ██╔╝  ╚██╔╝  ██╔══██╗██║   ██║╚════██║')
     print(' ╚████╔╝    ██║   ██║  ██║╚██████╔╝███████║')
     print('  ╚═══╝     ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝')
-    print ('[*] This tool dont promove web attacks and illegals attitudes')
+    print ('[*] This tool does not promote web attacks and illegals attitudes')
 
 def banner5():
     print(' ▄█    █▄  ▄██   ▄      ▄████████  ▄██████▄     ▄████████ ')
@@ -56,14 +56,14 @@ def banner5():
     print('███    ███ ███   ███   ███    ███ ███    ███    ▄█    ███ ')
     print (' ▀██████▀   ▀█████▀    ███    ███  ▀██████▀   ▄████████▀  ')
     print('                       ███    ███                         ')
-    print ('[*] This tool dont promove web attacks and illegals attitudes')
+    print ('[*] This tool does not promote web attacks and illegals attitudes')
     
 def banner6():
     print(' _____ __ __ _____ _____ _____ ')
     print('|  |  |  |  | __  |     |   __|')
     print('|  |  |_   _|    -|  |  |__   |')
     print(' \___/  |_| |__|__|_____|_____|')
-    print ('[*] This tool dont promove web attacks and illegals attitudes')
+    print ('[*] This tool does not promote web attacks and illegals attitudes')
     
 def banner7():
     print('     ##### /      ##                                          ')
@@ -85,7 +85,7 @@ def banner7():
     print('                     #####   ###                              ')
     print('                   /#######  /#                               ')
     print('                  /      ###/                                 ')
-    print ('[*] This tool dont promove web attacks and illegals attitudes')
+    print ('[*] This tool does not promote web attacks and illegals attitudes')
     
 def bincheckbanner():
     print('██████╗ ██╗███╗   ██╗     ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗')
@@ -134,10 +134,9 @@ def bininfo():
         print("Bin info:")
         print('')
         print(f"🏤 Bank: {result['bank']}")
-        print(f"®️ Brand: {result['brand']}")
+        print(f"✅️ Level: {result['brand']}")
         print(f"🏷 Type: {result['type']}")
         print(f"🌐 Country: {result['country']}")
-        print(f"⬆️ Level: {result['level']}")
     else:
         print("Error.")
         time.sleep(2)
@@ -160,7 +159,7 @@ def tools():
         print('[*] Installing Txtool...')
         os.system('apt install git')
         os.system('apt install python2')
-        os.system('git clone https://github.com/kuburan/txtool.git')
+        os.system('git clone https://github.com/kuburan/txtool.git ')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] After this type the follow commands:')
         print('cd ..')
