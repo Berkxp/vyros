@@ -142,15 +142,15 @@ def bininfo():
         print(Fore.RED + f"🏷 Type: {result['type']}")
         print(Fore.RED + f"🌐 Country: {result['country']}")
     else:
-        print("Error.")
+        print(Style.RESET_ALL + "Error.")
         time.sleep(2)
         os.system("clear")
         menuescolha()
         
 def tools():
-    escolhatool = input(Fore.MAGENTA + '>>> Select a option: ')
+    escolhatool = input( + '>>> Select a option: ')
     if escolhatool == '1':
-        print(Fore.CYAN'[*] Installing Zphisher...')
+        print('[*] Installing Zphisher...')
         os.system('pkg install tur-repo')
         os.system('pkg install zphisher')
         print(Fore.RED + '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
