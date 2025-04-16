@@ -92,13 +92,13 @@ def banner7():
     print (Fore.MAGENTA + '[*] This tool does not promote web attacks and illegals attitudes')
     
 def bincheckbanner():
-    print(Style.RESET_ALL + '        ██████╗ ██╗███╗   ██╗     ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗')
-    print('        ██╔══██╗██║████╗  ██║    ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝')
-    print('        ██████╔╝██║██╔██╗ ██║    ██║     ███████║█████╗  ██║     █████╔╝ ')
-    print('        ██╔══██╗██║██║╚██╗██║    ██║     ██╔══██║██╔══╝  ██║     ██╔═██╗ ')
-    print('        ██████╔╝██║██║ ╚████║    ╚██████╗██║  ██║███████╗╚██████╗██║  ██╗')
-    print('        ╚═════╝ ╚═╝╚═╝  ╚═══╝     ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝')
-    print('')
+    print(Fore.GREEN + """    ██████╗ ██╗███╗   ██╗     ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗
+    ██╔══██╗██║████╗  ██║    ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝
+    ██████╔╝██║██╔██╗ ██║    ██║     ███████║█████╗  ██║     █████╔╝ 
+    ██╔══██╗██║██║╚██╗██║    ██║     ██╔══██║██╔══╝  ██║     ██╔═██╗ 
+    ██████╔╝██║██║ ╚████║    ╚██████╗██║  ██║███████╗╚██████╗██║  ██╗
+    ╚═════╝ ╚═╝╚═╝  ╚═══╝     ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝""")
+    print(Style.RESET_ALL + '')
     print('')
      
 print ('>>> Starting Vyros tool...')
@@ -142,25 +142,26 @@ def bininfo():
         print(Fore.RED + f"🏷 Type: {result['type']}")
         print(Fore.RED + f"🌐 Country: {result['country']}")
     else:
-        print(Style.RESET_ALL + "Error.")
+        print(Fore.RESET + "Error.")
         time.sleep(2)
         os.system("clear")
         menuescolha()
         
 def tools():
-    escolhatool = input( + '>>> Select a option: ')
+    escolhatool = input(Fore.MAGENTA + '>>> Select a option: ')
     if escolhatool == '1':
-        print('[*] Installing Zphisher...')
+        print(Fore.CYAN + '[*] Installing Zphisher...')
         os.system('pkg install tur-repo')
         os.system('pkg install zphisher')
         print(Fore.RED + '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('Type "zphisher" to start Zphisher.')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         time.sleep(2)
         os.system('clear')
         menuescolha()
     elif escolhatool == '2':
-        print('[*] Installing Txtool...')
+        print(Fore.CYAN + '[*] Installing Txtool...')
         os.system('apt install git')
         os.system('apt install python2')
         os.system('git clone https://github.com/kuburan/txtool.git ')
@@ -172,11 +173,12 @@ def tools():
         print('txtool')
         print('[*] And is done!')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         time.sleep(3)
         os.system('clear')
         menuescolha()
     elif escolhatool == '3':
-        print('[*] Installing Red Hawk...')
+        print(Fore.CYAN+ '[*] Installing Red Hawk...')
         os.system('apt install git')
         os.system('apt install php')
         os.system('git clone https://github.com/Tuhinshubhra/RED_HAWK')
@@ -188,31 +190,34 @@ def tools():
         print('>>> php rhawk.php')
         print('[*]And is done!')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         time.sleep(4)
         os.system('clear')
         menuescolha()
     elif escolhatool == '4':
-        print('[*] Installing Sql Map...')
+        print(Fore.YELLOW + '[*] Installing Sql Map...')
         os.system('apt install python')
         os.system('pip install sqlmap')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] Type "sqlmap" to start the tool')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         time.sleep(2)
         os.system('clear')
         menuescolha()
     elif escolhatool == '5':
-        print('[*] Installing Black Hydra...')
+        print(Fore.RED + '[*] Installing Black Hydra...')
         os.system('apt install git')
         os.system('git clone https://github.com/Gameye98/Black-Hydra')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] Tool installed sucefully!')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         time.sleep(2)
         os.system('clear')
         menuescolha()
     elif escolhatool == '6':
-        print('[*] Installing XOIC...')
+        print(Fore.MAGENTA + '[*] Installing XOIC...')
         os.system('apt install python')
         os.system('pkg install git')
         os.system('git clone https://github.com/StormRLS/XOIC')
@@ -222,11 +227,12 @@ def tools():
         print('cd XOIC')
         print('python XOIC.py')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         time.sleep(4)
         os.system('clear')
         menuescolha()
     elif escolhatool == '7':
-        print('[*] Installing Xerxes...')
+        print(Fore.RED + '[*] Installing Xerxes...')
         os.system('pkg install git -y && git clone https://github.com/XCHADXFAQ77X/XERXES')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] After this is just type:')
@@ -237,13 +243,14 @@ def tools():
         print('Example:')
         print('./xerxes 192.168.1.8 443')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         time.sleep(8)
         os.system('clear')
         menuescolha()
     elif escolhatool == '8':
         os.system('apt install python2')
         os.system('git clone https://github.com/bibortone/D-Tech.git')
-        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.BLUE + '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] After this type:')
         print('cd ..')
         print('cd D-TECH')
@@ -251,14 +258,16 @@ def tools():
         print('')
         print('[*] And is done!')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         time.sleep(5)
         os.system('clear')
         menuescolha()
     elif escolhatool == '9':
         os.system('pkg install nmap')
-        print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.CYAN + '■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('[*] just type "nmap" to start the tool.')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         time.sleep(3)
         os.system('clear')
         bannerandom()
@@ -267,32 +276,35 @@ def tools():
         os.system('clear')
         exit()
     elif escolhatool == 'help':
-        print('')
+        print(Fore.RED + '')
         print('COMANDS LIST')
         print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
         print('help   print this help ')
         print('exit   exit tool')
         print('banner  changes banner')
         print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
+        print(Fore.RESET + '')
     elif escolhatool == 'banner':
         os.system('clear')
         bannerandom()
         tools()
     else:
-        print('■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.CYAN + '■■■■■■■■■■■■■■■■■■■■■■■■■■')
         print('Opção inválida')
         print('■■■■■■■■■■■■■■■■■■■■■■■■■■')
+        print(Fore.RESET + '')
         
 def main_menu():
+    print(Fore.RESET + '')
     print('')
-    print('')
-    print('■■■■■■■■■■■■■■■■■■■■■■■■■')
+    print(Fore.CYAN + '■■■■■■■■■■■■■■■■■■■■■■■■■')
     print('         MAIN MENU        ')
     print('1 > Bin check')
     print('2 > Ip lookup')
     print('3 > Ddos [OFF]')
     print('4 > Install tools')
     print('■■■■■■■■■■■■■■■■■■■■■■■■■')
+    print(Fore.RESET + '')
      
 def ip_lookup(ip_address):
     try:
@@ -305,7 +317,7 @@ def ip_lookup(ip_address):
 
         # Exibindo as informações
         print('')
-        print(f"Ip info: {ip_address}")
+        print(Fore.RED + f"Ip info: {ip_address}")
         print('𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃')
         print(f"💻 Hostname: {data.get('hostname', 'N/A')}")
         print(f"🏙 City: {data.get('city', 'N/A')}")
@@ -314,8 +326,9 @@ def ip_lookup(ip_address):
         print(f"📍 Location: {data.get('loc', 'N/A')}")
         print(f"🏢 Organization: {data.get('org', 'N/A')}")
         print('𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃')
-        print('')
-        backmenu3 = input('Back to menu? (yes/no)').lower()
+        print(Fore.RESET + '')
+        backmenu3 = input(Fore.CYAN + 'Back to menu? (yes/no)').lower()
+        print(Fore.RESET + '')
         if backmenu3 == 'yes':
             time.sleep(1)
             os.system('clear')
@@ -323,36 +336,37 @@ def ip_lookup(ip_address):
         if backmenu3 == 'no':
             time.sleep(1)
             os.system('clear')
-            print('>>> Exiting Vyros...')
+            print(Fore.CYAN + '>>> Exiting Vyros...')
+            print(Fore.RESET + '')
             exit()
     except requests.exceptions.RequestException as e:
-        print(f"Error while checking ip: {e}")
+        print(Fore.RED + f"Error while checking ip: {e}")
      
 def menuescolha():
     while True:
         bannerandom()
         main_menu()
-        escolha = input('>>> Option: ')
+        escolha = input(Fore.CYAN + '>>> Option: ')
         if escolha == '1':
             bininfo()
             time.sleep(2)
-            backmenu1 = input('Do you want back to menu? (yes/no) ')
+            backmenu1 = input(Fore.CYAN + 'Do you want back to menu? (yes/no) ')
             if backmenu1 == 'yes':
                 menuescolha()
             elif backmenu == 'no':
                 time.sleep(2)
-                print('[*] Exiting Vyros...')
-                break
+                print(Fore.RESET + '[*] Exiting Vyros...')
+                exit()
             else:
                 print('Invalid Option!')
         elif escolha == '2':
-            ip_address = input('Type Ip: ')
+            ip_address = input(Fore.CYAN + 'Type Ip: ')
             ip_lookup(ip_address)
         elif escolha == '3':
             # implementar ddos
             pass
         elif escolha == '4':
-            print('      INSTALL TOOLS')
+            print(Fore.CYAN + '      INSTALL TOOLS')
             print('■■■■■■■■■■■■■■■■■■■■■■')
             print('1 > Zphisher    6 > XOIC')
             print('2 > Txtool.     7 > Xerxes')
@@ -360,22 +374,23 @@ def menuescolha():
             print('4 > Sql Map.    9 > Nmap')
             print('5 > Black-Hydra 10 > Hammer')
             print('■■■■■■■■■■■■■■■■■■■■■■')
+            print(Fore.RESET + '')
             tools()
         elif escolha == 'help':
+            print(Fore.RESET + '')
             print('')
-            print('')
-            print('COMANDS LIST')
+            print(Fore.CYAN + '    COMANDS LIST')
             print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
             print('help   print this help ')
             print('exit   exit tool')
             print('banner  changes banner')
             print('●●●●●●●●●●●●●●●●●●●●●●●●●●●●●')
-            print('')
+            print(Fore.RESET + '')
         elif escolha == 'banner':
             os.system('clear')
             menuescolha()
         elif escolha == 'exit':
-            print('[*] Exiting Vyros...')
+            print(Fore.RESET + '[*] Exiting Vyros...')
             exit()
         elif escolha == 'clear':
             os.system('clear')
