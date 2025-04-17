@@ -2,7 +2,7 @@
 
 pip install socket
 
-pip insta threading
+pip install threading
 
 pip install colorama
 
