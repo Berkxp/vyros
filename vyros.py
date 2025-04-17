@@ -353,7 +353,7 @@ def menuescolha():
             backmenu1 = input(Fore.CYAN + 'Do you want back to menu? (yes/no) ')
             if backmenu1 == 'yes':
                 menuescolha()
-            elif backmenu == 'no':
+            elif backmenu1 == 'no':
                 time.sleep(2)
                 print(Fore.RESET + '[*] Exiting Vyros...')
                 exit()
