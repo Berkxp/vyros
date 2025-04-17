@@ -102,6 +102,16 @@ def bincheckbanner():
     ╚═════╝ ╚═╝╚═╝  ╚═══╝     ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝""")
     print(Style.RESET_ALL + '')
     print('')
+
+def ddosbanner():
+    print(Fore.RED + """
+    ██████╗ ██████╗  ██████╗ ███████╗
+    ██╔══██╗██╔══██╗██╔═══██╗██╔════╝
+    ██║  ██║██║  ██║██║   ██║███████╗
+    ██║  ██║██║  ██║██║   ██║╚════██║
+    ██████╔╝██████╔╝╚██████╔╝███████║
+    ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝
+                                 """)
      
 print ('>>> Starting Vyros tool...')
 
@@ -125,7 +135,8 @@ def bin_checker(bin_number):
     else:
         return None
 def target():
-    target = input("Enter target IP and port (e.g., 192.168.1.1 80): ")
+    ddosbanner()
+    target = input(Fore.MAGENTA + "Enter target IP and port (e.g., 192.168.1.1 80): ")
     threads = []
 
     for i in range(50):  # Create 50 threads
