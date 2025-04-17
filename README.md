@@ -8,7 +8,7 @@ Developed for Termux and Linux
 
 2 - IP Lookup (ON)
 
-3 - DDoS (OFF)
+3 - DDoS (ON)
 
 4- Install Tools (ON)
 
