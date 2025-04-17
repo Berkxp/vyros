@@ -270,7 +270,7 @@ def tools():
         print(Fore.RESET + '')
         time.sleep(3)
         os.system('clear')
-        bannerandom()
+        menuescolha()
     elif escolhatool == '10': hammer()
     elif escolhatool == 'exit':
         os.system('clear')
