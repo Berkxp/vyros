@@ -126,7 +126,7 @@ def bin_checker(bin_number):
 def bininfo():
     os.system("clear")
     bincheckbanner()
-    bin_number = input("Type Bin (6 digits): ")
+    bin_number = input("Type Bin (6/8 digits): ")
     result = bin_checker(bin_number)
 
     if result:
