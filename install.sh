@@ -1,5 +1,9 @@
 #!/bin/bash
 
+pip install socket
+
+pip insta threading
+
 pip install colorama
 
 pip install requests
